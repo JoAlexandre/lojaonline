@@ -1,0 +1,140 @@
+.rightBar{
+    position: fixed;
+    z-index: 100;
+    top: 70px;
+    height: 90vh;
+    background-color: white;
+    color: black;
+    border-left: 2px solid rgba(0, 0, 0, 0.486);
+    border-top: 2px solid rgba(0, 0, 0, 0.486);
+    box-shadow: 0px 15px 18px #00000091;
+    width: 28vw;
+    padding: 1rem;
+    
+    &.fadeIn{
+        animation: fadeIn;
+        animation-duration: .8s;
+        right: 0;
+        
+        
+    }
+    &.fadeOut{
+        animation: fadeOut;
+        animation-duration: .8s;
+        display: none;
+
+    }
+    @media screen and (max-width: 1360px){
+        min-width: 40%;
+        
+    }
+    @media screen and (max-width: 1060px){
+        min-width: 50%;
+        
+    }
+    @media screen and (max-width: 770px){
+        width:100%;
+    }
+}
+@keyframes fadeIn {
+    0%{right: -30vw;}
+    75%{right: 0;}
+    100%{ display: block;}
+}   
+@keyframes fadeOut {
+    0%{right: 0;}
+    75%{right: -30vw;}
+    100%{ display: none;}
+}
+
+.btn-right-bar{
+    background-color: transparent;
+    border: none;
+    margin-right: 0.5rem;
+    i{
+        color: #000 !important;
+    }
+}
+.finalizarCompra{
+    font-size: 1.5rem;
+    padding: 0;
+    color: #000;
+    text-align: center;
+    padding: 0.5rem;
+    & a{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.itens-carrinho{
+    overflow: auto;
+    max-height: 55vh;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.itens-favorito{
+    overflow: auto;
+    max-height: 75vh;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: auto;
+    padding: 0;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    @media screen and (max-width: 500px) {
+    }
+}   
+.section-carrinho{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: -webkit-fill-available;
+    margin-bottom: 4rem;
+    
+}
+.my-grid{
+    display: grid;
+    grid-template-columns: 50px 100px 100px auto auto;
+    gap: 10px;
+    padding: 10px 2px;
+    align-items: center;
+    
+    & span.img {
+        width: 100%;
+    }
+    & span.lixeira {
+        justify-self: end;
+    }
+    & span.qtd {
+        justify-self: end;
+    }
+    &-2{
+        @extend .my-grid;
+        grid-template-columns: 100px 100px 100px auto auto;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.486);
+        & span.lixeira {
+            justify-self: start;
+        }
+        & span.qtd {
+            justify-self: start;
+        }
+    }
+}
+
+.navbar-brand{
+    background-color: transparent;
+    border: none;
+    & a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    &:hover{
+        background-color: transparent
+    }
+}

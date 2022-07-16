@@ -1,0 +1,26 @@
+.container-finalizar{
+    max-height: 40vh;
+    overflow: auto;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.error-message{
+    font-size: 1rem;
+    color: red;
+    font-weight: 700;
+}
+.finalizar-compra-cliente{
+    text-align: center;
+    color: #fff;
+    & button{
+        width: -webkit-fill-available;
+    }
+}
+.card-fim{
+    display: flex;
+    flex-direction: column;
+}
+
